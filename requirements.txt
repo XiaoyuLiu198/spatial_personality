@@ -16,3 +16,4 @@ sse-starlette
 matplotlib
 protobuf
 cpm-kernels
+pandas
