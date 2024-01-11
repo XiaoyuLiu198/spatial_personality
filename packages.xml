@@ -1,0 +1,5 @@
+<package id="torch">
+  <description>torch version of 1.13.1</description>
+  <url>https://files.pythonhosted.org/packages/bf/47/d52be83b0ce72e83a6691177f27b110b7efefaae4f228f45e404c521e51d/torch-1.13.1-cp311-cp311-manylinux1_x86_64.whl</url>
+  <prefix>/opt/torch</prefix>
+</package>
