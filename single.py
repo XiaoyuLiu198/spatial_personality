@@ -6,6 +6,8 @@ from itertools import chain
 import copy
 import argparse
 from transformers import AutoTokenizer, AutoModel
+import fastllm_pytools
+from fastllm_pytools import llm
 
 # To run this, cmd: python single.py --file xx --checkpoint xx --destination xx
 
@@ -64,7 +66,8 @@ def grouping(dataset, prediction, trait):
   return grouped
 
 tokenizer = AutoTokenizer.from_pretrained(CKPT, trust_remote_code=True)
-model = AutoModel.from_pretrained(CKPT, trust_remote_code=True).half().cuda()
+model_former = AutoModel.from_pretrained(CKPT, trust_remote_code=True).half().cuda()
+model = llm.from_hf(model_former, tokenizer, dtype = "float16")
 print("model loading completed -----------------------------")
 
 trait = CKPT.split("/")[-1]
