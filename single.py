@@ -72,11 +72,12 @@ print("model loading completed -----------------------------")
 
 trait = CKPT.split("/")[-1]
 for i in range(START, END):
-  ds = pd.read_csv(FILE + str(i) + ".csv")
+  ds = pd.read_csv(FILE + "batched_sample_" + str(i) + ".csv")
   # res = copy.deepcopy(ds)
 
-  preds = pred(FILE + str(i) + ".csv", trait)
+  preds = pred(FILE + "batched_sample_" + str(i) + ".csv", trait)
   trait_res = grouping(ds, preds, trait)
   # res = pd.merge(res, trait_res, on="authorid", how="outer")
   trait_res.to_csv(DEST + trait + "_" + str(i) + ".csv")
   print(f"completed inference for {i}-th item -----------------------------")
+    
