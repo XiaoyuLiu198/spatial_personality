@@ -21,7 +21,7 @@ parser.add_argument('--end', type=str, required=True)
 
 args = parser.parse_args()
 FILE = args.file
-CKPT = pathlib.Path().resolve() + args.checkpoint
+CKPT = str(pathlib.Path().resolve()) + args.checkpoint
 DEST = args.destination
 START = int(args.start)
 END = int(args.end)
