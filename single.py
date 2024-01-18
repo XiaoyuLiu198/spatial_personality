@@ -6,6 +6,7 @@ from itertools import chain
 import copy
 import argparse
 from transformers import AutoTokenizer, AutoModel
+import pathlib
 # import fastllm_pytools
 # from fastllm_pytools import llm
 
@@ -20,7 +21,7 @@ parser.add_argument('--end', type=str, required=True)
 
 args = parser.parse_args()
 FILE = args.file
-CKPT = args.checkpoint
+CKPT = pathlib.Path().resolve() + args.checkpoint
 DEST = args.destination
 START = int(args.start)
 END = int(args.end)
