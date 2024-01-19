@@ -3,6 +3,7 @@
 #SBATCH --output="twi_infer_0.%j.%N.out"
 #SBATCH --account=soc121
 #SBATCH --partition=gpu
+#SBATCH --gpus=1
 #SBATCH --cpus-per-task=16
 #SBATCH --mem=90G
 #SBATCH --nodes=1
