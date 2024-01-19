@@ -1,14 +1,14 @@
 #!/bin/sh
-SBATCH --job-name="twi_infer_0"
-SBATCH --output="twi_infer_0.%j.%N.out"
-SBATCH --account=soc121
-SBATCH --partition=gpu
-SBATCH --cpus-per-task=16
-SBATCH --mem=90G
-SBATCH --nodes=1
-SBATCH --ntasks-per-node=1
-SBATCH --export=ALL
-SBATCH --time=10:00:00
+#SBATCH --job-name="twi_infer_0"
+#SBATCH --output="twi_infer_0.%j.%N.out"
+#SBATCH --account=soc121
+#SBATCH --partition=gpu
+#SBATCH --cpus-per-task=16
+#SBATCH --mem=90G
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=1
+#SBATCH --export=ALL
+#SBATCH --time=10:00:00
 
 module load gpu/0.15.4
 module load anaconda3/2020.11
