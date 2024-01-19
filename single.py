@@ -71,7 +71,7 @@ model = AutoModel.from_pretrained(CKPT, trust_remote_code=True).half().cuda()
 # model = llm.from_hf(model_former, tokenizer, dtype = "float16")
 print("model loading completed -----------------------------")
 
-trait = CKPT.split("/")[-1]
+trait = CKPT.split("/")[-2]
 for i in range(START, END):
   ds = pd.read_csv(FILE + "batched_sample_" + str(i) + ".csv")
   # res = copy.deepcopy(ds)
