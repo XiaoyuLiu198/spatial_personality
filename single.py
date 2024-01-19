@@ -54,16 +54,16 @@ def grouping(dataset, prediction, trait):
   votes = []
   for i, author in enumerate(list(grouped.index)):
     y_cnt, n_cnt = 0, 0
-    scores = []
     for val in grouped[prediction_col][author]:
-      scores.append(val)
-      if val >= 5:
+      if val > 5:
         y_cnt += 1
       else:
         n_cnt += 1
-    votes.append(y_cnt - n_cnt)
+    if y_cnt < 0:
+        votes.append(-1)
+    else:
+        votes.append(1)
   grouped[trait + "_2cls"] = votes
-  # res = pd.merge(grouped, ds, on='authorid', how='left')
   return grouped
 
 tokenizer = AutoTokenizer.from_pretrained(CKPT, trust_remote_code=True)
