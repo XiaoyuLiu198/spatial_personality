@@ -23,6 +23,9 @@ args = parser.parse_args()
 FILE = str(pathlib.Path().resolve()) + args.file
 CKPT = str(pathlib.Path().resolve()) + args.checkpoint
 DEST = str(pathlib.Path().resolve()) + args.destination
+print("------------------------------------------------")
+print(FILE, CKPTS, DEST)
+print("------------------------------------------------")
 START = int(args.start)
 END = int(args.end)
 
