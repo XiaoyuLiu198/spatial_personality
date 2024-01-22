@@ -20,9 +20,9 @@ parser.add_argument('--start', type=str, required=True)
 parser.add_argument('--end', type=str, required=True)
 
 args = parser.parse_args()
-FILE = args.file
+FILE = str(pathlib.Path().resolve()) + args.file
 CKPT = str(pathlib.Path().resolve()) + args.checkpoint
-DEST = args.destination
+DEST = str(pathlib.Path().resolve()) + args.destination
 START = int(args.start)
 END = int(args.end)
 
