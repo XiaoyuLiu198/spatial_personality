@@ -20,9 +20,9 @@ mkdir twitter_prompts
 mkdir ckpts
 pip install -r requirements.txt
 
-wget  --no-check-certificate 'https://docs.google.com/uc?export=download&id=1-zzeWz2KRDkqhPtg3cynM4buGerzRZs7’ -O twitter_prompts/batched_sample_12.csv
+wget  --no-check-certificate 'https://docs.google.com/uc?export=download&id=1-zzeWz2KRDkqhPtg3cynM4buGerzRZs7' -O twitter_prompts/batched_sample_12.csv
 
-wget  --no-check-certificate 'https://docs.google.com/uc?export=download&id=1015Mth8Yo86ZjF4ZFZCGx0e14AQClhuL’ -O twitter_prompts/batched_sample_13.csv
+wget  --no-check-certificate 'https://docs.google.com/uc?export=download&id=1015Mth8Yo86ZjF4ZFZCGx0e14AQClhuL' -O twitter_prompts/batched_sample_13.csv
 
 wget  --no-check-certificate 'https://docs.google.com/uc?export=download&id=104JBwX8wyM56Z5h6U4agPzDcgf8MhKBW' -O twitter_prompts/batched_sample_14.csv
 cd ckpts
