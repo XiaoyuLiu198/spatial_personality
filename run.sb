@@ -32,4 +32,4 @@ gdown https://drive.google.com/uc?id=17zoHRJNQvw8e6F2Fb2iDObmuOI-LctGj
 unzip extraversion_ckpts.zip
 
 cd ..
-python single.py --file twitter_prompts/ --checkpoint /ckpts/content/drive/MyDrive/twitter_inference_data/ckpts/extraversion --destination results/ --start 12 --end 15
+python single.py --file /twitter_prompts/ --checkpoint /ckpts/content/drive/MyDrive/twitter_inference_data/ckpts/extraversion --destination /results/ --start 12 --end 15
