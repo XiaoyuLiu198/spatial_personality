@@ -63,7 +63,7 @@ def grouping(dataset, prediction, trait):
         y_cnt += 1
       else:
         n_cnt += 1
-    if y_cnt < 0:
+    if y_cnt - n_cnt <= 0:
         votes.append(-1)
     else:
         votes.append(1)
