@@ -7,6 +7,7 @@ import copy
 import argparse
 from transformers import AutoTokenizer, AutoModel
 import pathlib
+import logging
 # import fastllm_pytools
 # from fastllm_pytools import llm
 
@@ -23,9 +24,9 @@ args = parser.parse_args()
 FILE = str(pathlib.Path().resolve()) + args.file
 CKPT = str(pathlib.Path().resolve()) + args.checkpoint
 DEST = str(pathlib.Path().resolve()) + args.destination
-print("------------------------------------------------")
-print(FILE, CKPT, DEST)
-print("------------------------------------------------")
+logging.debug("------------------------------------------------")
+logging.debug(FILE, CKPT, DEST)
+logging.debug("------------------------------------------------")
 START = int(args.start)
 END = int(args.end)
 
@@ -72,7 +73,7 @@ def grouping(dataset, prediction, trait):
 tokenizer = AutoTokenizer.from_pretrained(CKPT, trust_remote_code=True)
 model = AutoModel.from_pretrained(CKPT, trust_remote_code=True).half().cuda()
 # model = llm.from_hf(model_former, tokenizer, dtype = "float16")
-print("model loading completed -----------------------------")
+logging.debug("model loading completed -----------------------------")
 
 trait = CKPT.split("/")[-2]
 for i in range(START, END):
@@ -83,5 +84,5 @@ for i in range(START, END):
   trait_res = grouping(ds, preds, trait)
   # res = pd.merge(res, trait_res, on="authorid", how="outer")
   trait_res.to_csv(DEST + trait + "_" + str(i) + ".csv")
-  print(f"completed inference for {i}-th item -----------------------------")
+  logging.debug(f"completed inference for {i}-th item -----------------------------")
     
