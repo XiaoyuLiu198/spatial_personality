@@ -1,0 +1,19 @@
+wget  --no-check-certificate 'https://docs.google.com/uc?export=download&id=1-zzeWz2KRDkqhPtg3cynM4buGerzRZs7' -O batched_sample_12.csv
+wget  --no-check-certificate 'https://docs.google.com/uc?export=download&id=1015Mth8Yo86ZjF4ZFZCGx0e14AQClhuL' -O batched_sample_13.csv
+wget  --no-check-certificate 'https://docs.google.com/uc?export=download&id=104JBwX8wyM56Z5h6U4agPzDcgf8MhKBW' -O batched_sample_14.csv
+
+wget  --no-check-certificate 'https://docs.google.com/uc?export=download&id=10A0hmbJ-N_eLCbl6BUVAixaonuYNf5ID' -O batched_sample_15.csv
+wget  --no-check-certificate 'https://docs.google.com/uc?export=download&id=108FUGanYS6AN8_nA5WVZ40uh3vpEjBtm' -O batched_sample_16.csv
+wget  --no-check-certificate 'https://docs.google.com/uc?export=download&id=10AN8yrqwcq8tz9r3ogWgPI2_D-_livg4' -O batched_sample_17.csv
+wget  --no-check-certificate 'https://docs.google.com/uc?export=download&id=10BP-wQau-n-udTBCalRK-EYKKkMW6wlO' -O batched_sample_18.csv
+wget  --no-check-certificate 'https://docs.google.com/uc?export=download&id=10KwPSzpOHjgbPihY-5Acr3sIz1AxPB5v' -O batched_sample_19.csv
+wget  --no-check-certificate 'https://docs.google.com/uc?export=download&id=10SwG1QldqXhzUdi3GWiTy7RMue4Yozds' -O batched_sample_20.csv
+wget  --no-check-certificate 'https://docs.google.com/uc?export=download&id=10Mg04Ud3qYm7qhgh6sEaAHkwdQ5PNghP' -O batched_sample_21.csv
+wget  --no-check-certificate 'https://docs.google.com/uc?export=download&id=10gSXxX6dHcYaMHiBuik1JKCJrVCTEfMB' -O batched_sample_22.csv
+wget  --no-check-certificate 'https://docs.google.com/uc?export=download&id=10e0G1VxGDr6NwzHBPblGzL3ISyIIxe8m' -O batched_sample_23.csv
+wget  --no-check-certificate 'https://docs.google.com/uc?export=download&id=10kC-SNYnu2sDYaAwPry32cTT2z_689YT' -O batched_sample_24.csv
+wget  --no-check-certificate 'https://docs.google.com/uc?export=download&id=10l7DzEJUTtSuIN6f4mDs2X4nf4jNjc1k' -O batched_sample_25.csv
+wget  --no-check-certificate 'https://docs.google.com/uc?export=download&id=10q99HWNpmsmS_zWsjYjLx3Fyb4bJvS3b' -O batched_sample_26.csv
+wget  --no-check-certificate 'https://docs.google.com/uc?export=download&id=10qlqQubV7pIfIktZathk66vqToHM7YI6' -O batched_sample_27.csv
+wget  --no-check-certificate 'https://docs.google.com/uc?export=download&id=10vK9ce-rvF3jU2d_uSGTkZqNnb563Yob' -O batched_sample_28.csv
+wget  --no-check-certificate 'https://docs.google.com/uc?export=download&id=10u1zasPK5Y_ZmeRpJIA2CWct5Bq1Z0qW' -O batched_sample_29.csv
