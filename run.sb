@@ -31,8 +31,8 @@ cd ..
 cd ckpts
 pip uninstall gdown
 pip install gdown==4.6.0
-gdown https://drive.google.com/uc?id=17zoHRJNQvw8e6F2Fb2iDObmuOI-LctGj
-unzip extraversion_ckpts.zip
+gdown https://drive.google.com/uc?id=1-360Mw2wG4D6z3_R5uKP9QYuqG0NHbpv
+unzip agreeableness_ckpts.zip
 
 cd ..
-python single.py --file /twitter_prompts/ --checkpoint /ckpts/content/drive/MyDrive/twitter_inference_data/ckpts/extraversion --destination /results/ --start 12 --end 15
+python single.py --file /twitter_prompts/ --checkpoint /ckpts/content/drive/MyDrive/twitter_inference_data/ckpts/agreeableness --destination /results/ --start 12 --end 15
