@@ -1,0 +1,38 @@
+#!/bin/sh
+#SBATCH --job-name="twi_infer_0"
+#SBATCH --output="twi_infer_0.%j.%N.out"
+#SBATCH --account=soc121
+#SBATCH --partition=gpu
+#SBATCH --gpus=1
+#SBATCH --cpus-per-task=16
+#SBATCH --mem=90G
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=1
+#SBATCH --export=ALL
+#SBATCH --time=10:00:00
+
+module load gpu/0.15.4
+module load anaconda3/2020.11
+git clone https://github.com/XiaoyuLiu198/spatial_personality.git
+cd spatial_personality
+mkdir results
+mkdir twitter_prompts
+mkdir ckpts
+pip install -r requirements.txt
+
+cd twitter_prompts
+wget  --no-check-certificate 'https://docs.google.com/uc?export=download&id=10Mg04Ud3qYm7qhgh6sEaAHkwdQ5PNghP' -O batched_sample_21.csv
+wget  --no-check-certificate 'https://docs.google.com/uc?export=download&id=10gSXxX6dHcYaMHiBuik1JKCJrVCTEfMB' -O batched_sample_22.csv
+wget  --no-check-certificate 'https://docs.google.com/uc?export=download&id=10e0G1VxGDr6NwzHBPblGzL3ISyIIxe8m' -O batched_sample_23.csv
+readlink -f batched_sample_15.csv
+
+cd ..
+
+cd ckpts
+pip uninstall gdown
+pip install gdown==4.6.0
+gdown https://drive.google.com/uc?id=1-360Mw2wG4D6z3_R5uKP9QYuqG0NHbpv
+unzip agreeableness_ckpts.zip
+
+cd ..
+python single.py --file /twitter_prompts/ --checkpoint /ckpts/content/drive/MyDrive/twitter_inference_data/ckpts/agreeableness --destination /results/ --start 21 --end 24
