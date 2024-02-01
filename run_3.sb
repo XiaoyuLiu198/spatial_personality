@@ -9,7 +9,7 @@
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
 #SBATCH --export=ALL
-#SBATCH --time=10:00:00
+#SBATCH --time=4:30:00
 
 module load gpu/0.15.4
 module load anaconda3/2020.11
@@ -21,10 +21,8 @@ mkdir ckpts
 pip install -r requirements.txt
 
 cd twitter_prompts
-wget  --no-check-certificate 'https://docs.google.com/uc?export=download&id=10Mg04Ud3qYm7qhgh6sEaAHkwdQ5PNghP' -O batched_sample_21.csv
-wget  --no-check-certificate 'https://docs.google.com/uc?export=download&id=10gSXxX6dHcYaMHiBuik1JKCJrVCTEfMB' -O batched_sample_22.csv
-wget  --no-check-certificate 'https://docs.google.com/uc?export=download&id=10e0G1VxGDr6NwzHBPblGzL3ISyIIxe8m' -O batched_sample_23.csv
-readlink -f batched_sample_15.csv
+wget  --no-check-certificate 'https://docs.google.com/uc?export=download&id=10AN8yrqwcq8tz9r3ogWgPI2_D-_livg4' -O batched_sample_17.csv
+readlink -f batched_sample_17.csv
 
 cd ..
 
@@ -35,4 +33,4 @@ gdown https://drive.google.com/uc?id=1-360Mw2wG4D6z3_R5uKP9QYuqG0NHbpv
 unzip agreeableness_ckpts.zip
 
 cd ..
-python single.py --file /twitter_prompts/ --checkpoint /ckpts/content/drive/MyDrive/twitter_inference_data/ckpts/agreeableness --destination /results/ --start 21 --end 24
+python single.py --file /twitter_prompts/ --checkpoint /ckpts/content/drive/MyDrive/twitter_inference_data/ckpts/agreeableness --destination /results/ --start 17 --end 18
