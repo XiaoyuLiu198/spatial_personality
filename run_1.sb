@@ -9,7 +9,7 @@
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
 #SBATCH --export=ALL
-#SBATCH --time=10:00:00
+#SBATCH --time=12:00:00
 
 module load gpu/0.15.4
 module load anaconda3/2020.11
@@ -21,10 +21,10 @@ mkdir ckpts
 pip install -r requirements.txt
 
 cd twitter_prompts
-wget  --no-check-certificate 'https://docs.google.com/uc?export=download&id=10A0hmbJ-N_eLCbl6BUVAixaonuYNf5ID' -O batched_sample_15.csv
-wget  --no-check-certificate 'https://docs.google.com/uc?export=download&id=108FUGanYS6AN8_nA5WVZ40uh3vpEjBtm' -O batched_sample_16.csv
-wget  --no-check-certificate 'https://docs.google.com/uc?export=download&id=10AN8yrqwcq8tz9r3ogWgPI2_D-_livg4' -O batched_sample_17.csv
-readlink -f batched_sample_15.csv
+wget  --no-check-certificate 'https://docs.google.com/uc?export=download&id=10q99HWNpmsmS_zWsjYjLx3Fyb4bJvS3b' -O batched_sample_26.csv
+wget  --no-check-certificate 'https://docs.google.com/uc?export=download&id=10qlqQubV7pIfIktZathk66vqToHM7YI6' -O batched_sample_27.csv
+wget  --no-check-certificate 'https://docs.google.com/uc?export=download&id=10vK9ce-rvF3jU2d_uSGTkZqNnb563Yob' -O batched_sample_28.csv
+readlink -f batched_sample_26.csv
 
 cd ..
 
@@ -35,4 +35,4 @@ gdown https://drive.google.com/uc?id=1-360Mw2wG4D6z3_R5uKP9QYuqG0NHbpv
 unzip agreeableness_ckpts.zip
 
 cd ..
-python single.py --file /twitter_prompts/ --checkpoint /ckpts/content/drive/MyDrive/twitter_inference_data/ckpts/agreeableness --destination /results/ --start 15 --end 18
+python single.py --file /twitter_prompts/ --checkpoint /ckpts/content/drive/MyDrive/twitter_inference_data/ckpts/agreeableness --destination /results/ --start 26 --end 29
