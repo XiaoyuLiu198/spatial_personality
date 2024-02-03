@@ -21,16 +21,18 @@ mkdir ckpts
 pip install -r requirements.txt
 
 cd twitter_prompts
-wget  --no-check-certificate 'https://docs.google.com/uc?export=download&id=10SwG1QldqXhzUdi3GWiTy7RMue4Yozds' -O batched_sample_20.csv
-readlink -f batched_sample_20.csv
+wget  --no-check-certificate 'https://docs.google.com/uc?export=download&id=10A0hmbJ-N_eLCbl6BUVAixaonuYNf5ID' -O batched_sample_15.csv
+wget  --no-check-certificate 'https://docs.google.com/uc?export=download&id=108FUGanYS6AN8_nA5WVZ40uh3vpEjBtm' -O batched_sample_16.csv
+wget  --no-check-certificate 'https://docs.google.com/uc?export=download&id=10AN8yrqwcq8tz9r3ogWgPI2_D-_livg4' -O batched_sample_17.csv
+readlink -f batched_sample_15.csv
 
 cd ..
 
 cd ckpts
 pip uninstall gdown
 pip install gdown==4.6.0
-gdown https://drive.google.com/uc?id=1-360Mw2wG4D6z3_R5uKP9QYuqG0NHbpv
-unzip agreeableness_ckpts.zip
+gdown https://drive.google.com/uc?id=1XJKNJ_NlFtHW3bv6ODkTn395pq7JIfWF
+unzip openness_ckpts.zip
 
 cd ..
-python single.py --file /twitter_prompts/ --checkpoint /ckpts/content/drive/MyDrive/twitter_inference_data/ckpts/agreeableness --destination /results/ --start 20 --end 21
+python single.py --file /twitter_prompts/ --checkpoint /ckpts/content/drive/MyDrive/twitter_inference_data/ckpts/openness --destination /results/ --start 15 --end 18
