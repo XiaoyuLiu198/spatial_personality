@@ -21,10 +21,10 @@ mkdir ckpts
 pip install -r requirements.txt
 
 cd twitter_prompts
-wget  --no-check-certificate 'https://docs.google.com/uc?export=download&id=1-zzeWz2KRDkqhPtg3cynM4buGerzRZs7' -O batched_sample_12.csv
-wget  --no-check-certificate 'https://docs.google.com/uc?export=download&id=1015Mth8Yo86ZjF4ZFZCGx0e14AQClhuL' -O batched_sample_13.csv
-wget  --no-check-certificate 'https://docs.google.com/uc?export=download&id=104JBwX8wyM56Z5h6U4agPzDcgf8MhKBW' -O batched_sample_14.csv
-readlink -f batched_sample_12.csv
+wget  --no-check-certificate 'https://docs.google.com/uc?export=download&id=10qlqQubV7pIfIktZathk66vqToHM7YI6' -O batched_sample_27.csv
+wget  --no-check-certificate 'https://docs.google.com/uc?export=download&id=10vK9ce-rvF3jU2d_uSGTkZqNnb563Yob' -O batched_sample_28.csv
+wget  --no-check-certificate 'https://docs.google.com/uc?export=download&id=10u1zasPK5Y_ZmeRpJIA2CWct5Bq1Z0qW' -O batched_sample_29.csv
+readlink -f batched_sample_27.csv
 
 cd ..
 
@@ -35,4 +35,4 @@ gdown https://drive.google.com/uc?id=1XJKNJ_NlFtHW3bv6ODkTn395pq7JIfWF
 unzip openness_ckpts.zip
 
 cd ..
-python single.py --file /twitter_prompts/ --checkpoint /ckpts/content/drive/MyDrive/twitter_inference_data/ckpts/openness --destination /results/ --start 12 --end 15
+python single.py --file /twitter_prompts/ --checkpoint /ckpts/content/drive/MyDrive/twitter_inference_data/ckpts/openness --destination /results/ --start 27 --end 30
