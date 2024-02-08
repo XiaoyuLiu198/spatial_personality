@@ -31,8 +31,8 @@ cd ..
 cd ckpts
 pip uninstall gdown
 pip install gdown==4.6.0
-gdown https://drive.google.com/uc?id=1-EU2aXWFBg0zNHw9KXFxWptdxDXQXttb
-unzip neuroticism_ckpts.zip
+gdown https://drive.google.com/uc?id=1JTkg-z211GusTeY-ZU-IIQcq7wy1ovDr
+unzip conscientiousness_ckpts.zip
 
 cd ..
-python single_1.py --file /twitter_prompts/ --checkpoint /ckpts/content/drive/MyDrive/twitter_inference_data/ckpts/neuroticism --destination /results/ --start 15 --end 18
+python single_1.py --file /twitter_prompts/ --checkpoint /ckpts/content/drive/MyDrive/twitter_inference_data/ckpts/conscientiousness --destination /results/ --start 15 --end 18
