@@ -35,4 +35,4 @@ gdown https://drive.google.com/uc?id=1-EU2aXWFBg0zNHw9KXFxWptdxDXQXttb
 unzip neuroticism_ckpts.zip
 
 cd ..
-python single.py --file /twitter_prompts/ --checkpoint /ckpts/content/drive/MyDrive/twitter_inference_data/ckpts/neuroticism --destination /results/ --start 15 --end 18
+python single_1.py --file /twitter_prompts/ --checkpoint /ckpts/content/drive/MyDrive/twitter_inference_data/ckpts/neuroticism --destination /results/ --start 15 --end 18
