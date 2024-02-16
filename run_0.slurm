@@ -12,6 +12,7 @@
 #SBATCH --time=16:00:00
 
 module load anaconda3_gpu/23.3.1
+module load gcc/11.4.0
 git clone https://github.com/XiaoyuLiu198/spatial_personality.git
 cd spatial_personality
 mkdir results
