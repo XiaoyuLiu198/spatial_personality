@@ -1,0 +1,37 @@
+#!/bin/sh
+#SBATCH --job-name="twi_infer_0"
+#SBATCH --output="twi_infer_0.%j.%N.out"
+#SBATCH --account=bckz-delta-gpu
+#SBATCH --partition=gpuA100x4
+#SBATCH --gpus=1
+#SBATCH --cpus-per-task=16
+#SBATCH --mem=90G
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=4
+#SBATCH --export=ALL
+#SBATCH --time=16:00:00
+
+module load anaconda3_gpu/23.3.1
+git clone https://github.com/XiaoyuLiu198/spatial_personality.git
+cd spatial_personality
+mkdir results
+mkdir twitter_prompts
+mkdir ckpts
+pip install -r requirements.txt
+
+cd twitter_prompts
+wget  --no-check-certificate 'https://docs.google.com/uc?export=download&id=10A0hmbJ-N_eLCbl6BUVAixaonuYNf5ID' -O batched_sample_15.csv
+wget  --no-check-certificate 'https://docs.google.com/uc?export=download&id=108FUGanYS6AN8_nA5WVZ40uh3vpEjBtm' -O batched_sample_16.csv
+wget  --no-check-certificate 'https://docs.google.com/uc?export=download&id=10AN8yrqwcq8tz9r3ogWgPI2_D-_livg4' -O batched_sample_17.csv
+readlink -f batched_sample_15.csv
+
+cd ..
+
+cd ckpts
+pip uninstall gdown
+pip install gdown==4.6.0
+gdown https://drive.google.com/uc?id=1JTkg-z211GusTeY-ZU-IIQcq7wy1ovDr
+unzip conscientiousness_ckpts.zip
+
+cd ..
+python single.py --file /twitter_prompts/ --checkpoint /ckpts/content/drive/MyDrive/twitter_inference_data/ckpts/conscientiousness --destination /results/ --start 15 --end 18
