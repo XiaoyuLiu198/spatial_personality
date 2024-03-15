@@ -17,3 +17,9 @@ wget  --no-check-certificate 'https://docs.google.com/uc?export=download&id=10q9
 wget  --no-check-certificate 'https://docs.google.com/uc?export=download&id=10qlqQubV7pIfIktZathk66vqToHM7YI6' -O batched_sample_27.csv
 wget  --no-check-certificate 'https://docs.google.com/uc?export=download&id=10vK9ce-rvF3jU2d_uSGTkZqNnb563Yob' -O batched_sample_28.csv
 wget  --no-check-certificate 'https://docs.google.com/uc?export=download&id=10u1zasPK5Y_ZmeRpJIA2CWct5Bq1Z0qW' -O batched_sample_29.csv
+
+wget  --no-check-certificate 'https://docs.google.com/uc?export=download&id=1CUxYShXbIkC9qnxoT3lFFneDWZlCrqbn' -O post_sample_1199.csv
+wget  --no-check-certificate 'https://docs.google.com/uc?export=download&id=1CQDDqHfiZc8inKrXARu6dCEZdqY72373' -O post_sample_1198.csv
+wget  --no-check-certificate 'https://docs.google.com/uc?export=download&id=1COvMNOjEGsKAm4-qXSa1U_Jg24OaDJ9r' -O post_sample_1197.csv
+wget  --no-check-certificate 'https://docs.google.com/uc?export=download&id=1CNbAm5kyRLtTcS4imiiLoRspH60KGeTk' -O post_sample_1196.csv
+wget  --no-check-certificate 'https://docs.google.com/uc?export=download&id=1CEwMsC0B2Mt0k2QNacQCmKqITgDusGej' -O post_sample_1195.csv
