@@ -3,15 +3,14 @@
 #SBATCH --output="twi_infer_0.%j.%N.out"
 #SBATCH --account=bckz-delta-gpu
 #SBATCH --partition=gpuA100x4
-#SBATCH --gpus=4
 #SBATCH --cpus-per-task=16
 #SBATCH --mem=90G
 #SBATCH --nodes=1
 #SBATCH --ntasks-per-node=1
 #SBATCH --export=ALL
 #SBATCH --time=16:00:00
-#SBATCH --gpus-per-node=1
-#SBATCH --gpus-per-task=1
+#SBATCH --gpus-per-node=4
+#SBATCH --gpus-per-task=4
 
 module load anaconda3_gpu
 module load cuda
