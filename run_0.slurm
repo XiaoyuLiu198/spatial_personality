@@ -11,7 +11,7 @@
 #SBATCH --export=ALL
 #SBATCH --time=16:00:00
 #SBATCH --gpus-per-node=1
-#SBATCH --gpus-per-task=2
+#SBATCH --gpus-per-task=1
 
 module load anaconda3_gpu
 module load cuda
