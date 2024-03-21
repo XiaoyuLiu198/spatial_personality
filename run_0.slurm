@@ -3,7 +3,7 @@
 #SBATCH --output="twi_infer_0.%j.%N.out"
 #SBATCH --account=bckz-delta-gpu
 #SBATCH --partition=gpuA100x4
-#SBATCH --gpus=1
+#SBATCH --gpus=4
 #SBATCH --cpus-per-task=16
 #SBATCH --mem=90G
 #SBATCH --nodes=1
