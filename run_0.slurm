@@ -14,6 +14,16 @@
 #SBATCH --gpus-per-task=1
 
 module load anaconda3_gpu
+module load cuda
+git clone https://github.com/ztxz16/fastllm
+cd fastllm
+mkdir build
+cd build
+cmake .. -DUSE_CUDA=ON
+make -j
+cd tools && python setup.py install
+cd ..
+
 git clone https://github.com/XiaoyuLiu198/spatial_personality.git
 cd spatial_personality
 mkdir results
