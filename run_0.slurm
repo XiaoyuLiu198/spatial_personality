@@ -22,6 +22,7 @@ cmake .. -DUSE_CUDA=ON
 make -j
 cd tools && python setup.py install
 cd ..
+cd ..
 
 git clone https://github.com/XiaoyuLiu198/spatial_personality.git
 cd spatial_personality
