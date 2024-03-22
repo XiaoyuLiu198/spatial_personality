@@ -12,6 +12,9 @@
 #SBATCH --gpus-per-node=4
 #SBATCH --gpus-per-task=4
 
+current_date_time="`date +%Y%m%d%H%M%S`"
+echo $current_date_time
+
 module load anaconda3_gpu
 module load cuda
 git clone https://github.com/ztxz16/fastllm
@@ -45,3 +48,6 @@ unzip conscientiousness_ckpts.zip
 
 cd ..
 python single.py --file /twitter_prompts/ --checkpoint /ckpts/content/drive/MyDrive/twitter_inference_data/ckpts/conscientiousness --destination /results/ --start 1199 --end 1200
+
+current_date_time="`date +%Y%m%d%H%M%S`"
+echo $current_date_time
